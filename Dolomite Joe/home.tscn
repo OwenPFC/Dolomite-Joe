@@ -1,0 +1,73 @@
+[gd_scene load_steps=6 format=3 uid="uid://b7jyc0ki1jsoc"]
+
+[ext_resource type="Script" path="res://home.gd" id="1_e04v7"]
+[ext_resource type="Texture2D" uid="uid://da0s4fmwor73h" path="res://interrogation/textbox.png" id="2_mbqia"]
+[ext_resource type="Texture2D" uid="uid://d2ydf3qfvndtp" path="res://homeBase.png" id="2_sjtw8"]
+[ext_resource type="Texture2D" uid="uid://cgudjncmy7yir" path="res://black.png" id="4_0g8ek"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_lmopf"]
+
+[node name="Home" type="Node2D"]
+position = Vector2(130, 197)
+script = ExtResource("1_e04v7")
+
+[node name="visual" type="Sprite2D" parent="."]
+position = Vector2(446.25, 127)
+scale = Vector2(0.807208, 0.950147)
+texture = ExtResource("2_sjtw8")
+
+[node name="textBox" type="Sprite2D" parent="."]
+position = Vector2(414, 331)
+scale = Vector2(0.718691, 0.78022)
+texture = ExtResource("2_mbqia")
+
+[node name="theText" type="Label" parent="textBox"]
+offset_left = -245.759
+offset_top = -74.338
+offset_right = 248.241
+offset_bottom = 71.662
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 30
+text = "Hello this is the text"
+autowrap_mode = 2
+
+[node name="littleBackdropRectangle" type="Sprite2D" parent="."]
+position = Vector2(26, 340)
+scale = Vector2(0.497154, 0.653846)
+texture = ExtResource("2_mbqia")
+
+[node name="littleBackdropRectangle2" type="Sprite2D" parent="."]
+position = Vector2(781, 332)
+scale = Vector2(0.492884, 0.626374)
+texture = ExtResource("2_mbqia")
+
+[node name="choice1" type="Button" parent="."]
+offset_left = -98.0
+offset_top = 290.0
+offset_right = 149.0
+offset_bottom = 390.0
+text = "Hello this is choice 1"
+
+[node name="choice2" type="Button" parent="."]
+offset_left = 657.0
+offset_top = 287.0
+offset_right = 906.0
+offset_bottom = 383.0
+text = "Hello this is choice 2"
+
+[node name="endVisual" type="Sprite2D" parent="."]
+
+[node name="endVisualHitBox" type="Area2D" parent="endVisual"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="endVisual/endVisualHitBox"]
+shape = SubResource("RectangleShape2D_lmopf")
+
+[node name="endScreen" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(468, 128)
+scale = Vector2(1.05903, 1.03704)
+texture = ExtResource("4_0g8ek")
+
+[connection signal="pressed" from="choice1" to="." method="_on_choice_1_pressed"]
+[connection signal="pressed" from="choice2" to="." method="_on_choice_2_pressed"]
+[connection signal="mouse_entered" from="endVisual/endVisualHitBox" to="." method="_on_end_visual_hit_box_mouse_entered"]

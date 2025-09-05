@@ -1,0 +1,161 @@
+[gd_scene load_steps=13 format=3 uid="uid://d31aw0hn432mt"]
+
+[ext_resource type="Script" path="res://negotiation 3.gd" id="1_iwe82"]
+[ext_resource type="Texture2D" uid="uid://da0s4fmwor73h" path="res://interrogation/textbox.png" id="2_1j3g1"]
+[ext_resource type="Texture2D" uid="uid://by8vj1b5ma7hr" path="res://interrogation/crusdaer.png" id="2_4s2v3"]
+[ext_resource type="Texture2D" uid="uid://8myqmlhsqfbh" path="res://interrogation/heart-removebg-preview.png" id="2_7qs8h"]
+[ext_resource type="Texture2D" uid="uid://gqyc6ns6s2" path="res://interrogation/rainbow.png" id="3_5pxrs"]
+[ext_resource type="Texture2D" uid="uid://d07m4u0h0xqnf" path="res://interrogation/redSea.jpg" id="4_nol8o"]
+[ext_resource type="Texture2D" uid="uid://b0b1kkvtusxjc" path="res://interrogation/holyLand.webp" id="5_mps3n"]
+[ext_resource type="Texture2D" uid="uid://4k6k5b78q26v" path="res://interrogation/thomas.png" id="6_3u6yx"]
+[ext_resource type="Texture2D" uid="uid://dqly7obsapmo1" path="res://interrogation/bushtransp.png" id="7_5d58j"]
+[ext_resource type="Texture2D" uid="uid://324o6ofy1ixi" path="res://interrogation/hang.png" id="8_5lnbs"]
+[ext_resource type="Texture2D" uid="uid://cgudjncmy7yir" path="res://black.png" id="11_kaf1y"]
+[ext_resource type="Texture2D" uid="uid://dp1urv6o2p3p4" path="res://crusader.png" id="12_yrjv6"]
+
+[node name="negotiation 3" type="Node2D"]
+script = ExtResource("1_iwe82")
+
+[node name="visual" type="Sprite2D" parent="."]
+position = Vector2(577.125, 325.75)
+scale = Vector2(0.803184, 0.956745)
+texture = ExtResource("2_4s2v3")
+
+[node name="MM" type="Button" parent="."]
+anchors_preset = -1
+anchor_left = -0.101
+anchor_top = -0.096
+anchor_right = -0.101
+anchor_bottom = -0.096
+offset_left = 27.0
+offset_top = 166.0
+offset_right = 144.0
+offset_bottom = 300.0
+theme_override_colors/font_color = Color(0, 0, 0, 0)
+theme_override_colors/icon_hover_color = Color(0.484893, 0.699549, 0.944894, 1)
+icon = ExtResource("2_7qs8h")
+flat = true
+expand_icon = true
+
+[node name="rainbow" type="Button" parent="."]
+offset_left = -6.0
+offset_top = 64.0
+offset_right = 211.0
+offset_bottom = 208.0
+theme_override_colors/icon_hover_color = Color(0.484893, 0.699549, 0.944894, 1)
+theme_override_colors/icon_hover_pressed_color = Color(0.484893, 0.699549, 0.944894, 1)
+icon = ExtResource("3_5pxrs")
+flat = true
+expand_icon = true
+
+[node name="redSea" type="Button" parent="."]
+offset_left = 404.0
+offset_top = 8.0
+offset_right = 557.0
+offset_bottom = 245.0
+theme_override_colors/icon_hover_color = Color(0.484893, 0.699549, 0.944894, 1)
+theme_override_colors/icon_hover_pressed_color = Color(0.484893, 0.699549, 0.944894, 1)
+icon = ExtResource("4_nol8o")
+flat = true
+expand_icon = true
+
+[node name="holyLand" type="Button" parent="."]
+offset_left = 210.0
+offset_top = -12.0
+offset_right = 387.0
+offset_bottom = 268.0
+theme_override_colors/icon_hover_color = Color(0.484893, 0.699549, 0.944894, 1)
+theme_override_colors/icon_hover_pressed_color = Color(0.484893, 0.699549, 0.944894, 1)
+icon = ExtResource("5_mps3n")
+flat = true
+expand_icon = true
+
+[node name="thomas" type="Button" parent="."]
+offset_left = 906.0
+offset_top = 42.0
+offset_right = 1175.0
+offset_bottom = 346.0
+theme_override_colors/icon_hover_color = Color(0.484893, 0.699549, 0.944894, 1)
+theme_override_colors/icon_hover_pressed_color = Color(0.484893, 0.699549, 0.944894, 1)
+icon = ExtResource("6_3u6yx")
+flat = true
+expand_icon = true
+
+[node name="bush" type="Button" parent="."]
+offset_left = 276.0
+offset_top = 407.0
+offset_right = 372.0
+offset_bottom = 483.0
+theme_override_colors/icon_hover_color = Color(0.484893, 0.699549, 0.944894, 1)
+theme_override_colors/icon_hover_pressed_color = Color(0.484893, 0.699549, 0.944894, 1)
+icon = ExtResource("7_5d58j")
+flat = true
+expand_icon = true
+
+[node name="hang" type="Button" parent="."]
+offset_left = 679.0
+offset_top = 25.0
+offset_right = 851.0
+offset_bottom = 271.0
+theme_override_colors/icon_hover_color = Color(0.484893, 0.699549, 0.944894, 1)
+theme_override_colors/icon_hover_pressed_color = Color(0.484893, 0.699549, 0.944894, 1)
+icon = ExtResource("8_5lnbs")
+flat = true
+expand_icon = true
+
+[node name="input" type="LineEdit" parent="."]
+offset_left = 331.0
+offset_top = 278.0
+offset_right = 670.0
+offset_bottom = 401.0
+placeholder_text = "What could it be? (press enter when done)"
+
+[node name="textBox" type="Sprite2D" parent="."]
+position = Vector2(504, 566)
+scale = Vector2(0.82774, 0.875687)
+texture = ExtResource("2_1j3g1")
+
+[node name="theText" type="Label" parent="textBox"]
+offset_left = -243.376
+offset_top = -72.6233
+offset_right = 243.624
+offset_bottom = 68.3767
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 20
+text = "Hello"
+autowrap_mode = 2
+
+[node name="endScreen" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(591, 341)
+scale = Vector2(1.03299, 1.05864)
+texture = ExtResource("11_kaf1y")
+
+[node name="cg" type="Sprite2D" parent="."]
+position = Vector2(716, 338)
+texture = ExtResource("12_yrjv6")
+
+[connection signal="mouse_entered" from="MM" to="." method="_on_mm_mouse_entered"]
+[connection signal="mouse_exited" from="MM" to="." method="_on_mm_mouse_exited"]
+[connection signal="pressed" from="MM" to="." method="_on_mm_pressed"]
+[connection signal="mouse_entered" from="rainbow" to="." method="_on_rainbow_mouse_entered"]
+[connection signal="mouse_exited" from="rainbow" to="." method="_on_rainbow_mouse_exited"]
+[connection signal="pressed" from="rainbow" to="." method="_on_rainbow_pressed"]
+[connection signal="mouse_entered" from="redSea" to="." method="_on_red_sea_mouse_entered"]
+[connection signal="mouse_exited" from="redSea" to="." method="_on_red_sea_mouse_exited"]
+[connection signal="pressed" from="redSea" to="." method="_on_red_sea_pressed"]
+[connection signal="mouse_entered" from="holyLand" to="." method="_on_holy_land_mouse_entered"]
+[connection signal="mouse_exited" from="holyLand" to="." method="_on_holy_land_mouse_exited"]
+[connection signal="pressed" from="holyLand" to="." method="_on_holy_land_pressed"]
+[connection signal="mouse_entered" from="thomas" to="." method="_on_thomas_mouse_entered"]
+[connection signal="mouse_exited" from="thomas" to="." method="_on_thomas_mouse_exited"]
+[connection signal="pressed" from="thomas" to="." method="_on_thomas_pressed"]
+[connection signal="mouse_entered" from="bush" to="." method="_on_bush_mouse_entered"]
+[connection signal="mouse_exited" from="bush" to="." method="_on_bush_mouse_exited"]
+[connection signal="pressed" from="bush" to="." method="_on_bush_pressed"]
+[connection signal="mouse_entered" from="hang" to="." method="_on_hang_mouse_entered"]
+[connection signal="mouse_exited" from="hang" to="." method="_on_hang_mouse_exited"]
+[connection signal="pressed" from="hang" to="." method="_on_hang_pressed"]
+[connection signal="mouse_entered" from="input" to="." method="_on_input_mouse_entered"]
+[connection signal="mouse_exited" from="input" to="." method="_on_input_mouse_exited"]
+[connection signal="text_submitted" from="input" to="." method="_on_input_text_submitted"]

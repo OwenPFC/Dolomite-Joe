@@ -1,0 +1,79 @@
+[gd_scene load_steps=8 format=3 uid="uid://di1l1a6ef4bda"]
+
+[ext_resource type="Script" path="res://negotiation2.gd" id="1_7mcwd"]
+[ext_resource type="Texture2D" uid="uid://da0s4fmwor73h" path="res://interrogation/textbox.png" id="2_eq8nn"]
+[ext_resource type="Texture2D" uid="uid://b0jixlpp6doxn" path="res://interrogation/collector.png" id="2_h0r6m"]
+[ext_resource type="Texture2D" uid="uid://jljawjr4v25f" path="res://interrogation/rocks.jpg" id="4_ttd5h"]
+[ext_resource type="Texture2D" uid="uid://2ffwlinlcvv4" path="res://interrogation/rocks.webp" id="5_wx5ni"]
+[ext_resource type="Texture2D" uid="uid://cgudjncmy7yir" path="res://black.png" id="6_iwxn4"]
+[ext_resource type="Texture2D" uid="uid://bdg6qglii354u" path="res://helmut.png" id="7_pqq1i"]
+
+[node name="negotiation2" type="Node2D"]
+script = ExtResource("1_7mcwd")
+
+[node name="visual" type="Sprite2D" parent="."]
+position = Vector2(575.625, 326.5)
+scale = Vector2(0.802484, 0.951613)
+texture = ExtResource("2_h0r6m")
+
+[node name="textBox" type="Sprite2D" parent="."]
+position = Vector2(544, 535)
+scale = Vector2(0.940228, 1.01099)
+texture = ExtResource("2_eq8nn")
+
+[node name="theText" type="Label" parent="textBox"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -247.812
+offset_top = -71.2174
+offset_right = -280.812
+offset_bottom = -105.217
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 20
+text = "Hello this is the text"
+autowrap_mode = 2
+
+[node name="choice1" type="Button" parent="."]
+offset_left = 17.0
+offset_top = 18.0
+offset_right = 377.0
+offset_bottom = 352.0
+theme_override_colors/icon_hover_color = Color(0.484893, 0.699549, 0.944894, 1)
+theme_override_colors/icon_hover_pressed_color = Color(0.484893, 0.699549, 0.944894, 1)
+flat = true
+expand_icon = true
+
+[node name="choice2" type="Button" parent="."]
+offset_left = 696.0
+offset_top = 35.0
+offset_right = 1092.0
+offset_bottom = 356.0
+theme_override_colors/icon_hover_color = Color(0.484893, 0.699549, 0.944894, 1)
+theme_override_colors/icon_hover_pressed_color = Color(0.484893, 0.699549, 0.944894, 1)
+flat = true
+expand_icon = true
+
+[node name="Rocks" type="Sprite2D" parent="."]
+position = Vector2(82.5, 519.5)
+scale = Vector2(0.0722656, 0.169303)
+texture = ExtResource("4_ttd5h")
+
+[node name="Rocks2" type="Sprite2D" parent="."]
+position = Vector2(1052, 517)
+scale = Vector2(0.276389, 0.2875)
+texture = ExtResource("5_wx5ni")
+
+[node name="endScreen" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(699, 439)
+scale = Vector2(1.36719, 1.41975)
+texture = ExtResource("6_iwxn4")
+
+[node name="cg" type="Sprite2D" parent="."]
+position = Vector2(716.25, 310)
+scale = Vector2(1.00245, 1)
+texture = ExtResource("7_pqq1i")
+
+[connection signal="pressed" from="choice1" to="." method="_on_choice_1_pressed"]
+[connection signal="pressed" from="choice2" to="." method="_on_choice_2_pressed"]
