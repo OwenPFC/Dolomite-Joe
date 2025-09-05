@@ -1,5 +1,7 @@
 # A generational tale, told in video game form
 
+[Newgrounds](https://www.newgrounds.com/portal/view/954427), [Itch.io](https://jowain.itch.io/dolomite-joe-postjam)
+
 Dolomite Joe was created in **one week** for the University at Buffalo Game Development Club's (UBGD) 2024 Halloween Game Jam.
 The theme was "automation", and one of the bonus themes was "rocks". From this, my narrative masterwork was created.
 
